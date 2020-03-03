@@ -1,0 +1,335 @@
+@import url('https://fonts.googleapis.com/css?family=Pacifico|Varela+Round&display=swap');
+
+*
+{
+	font-family: 'Varela', sans-serif;
+	scroll-behavior: smooth;
+}
+
+
+body {
+	margin: 0;
+	font-weight: 800;
+}
+
+.container {
+	width: 80%;
+	margin: 0 auto;
+}
+
+header {
+  background: #55d6aa;
+}
+
+header::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.logo {
+  float: left;
+  padding: 10px 0;
+}
+
+nav {
+  float: right;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  display: inline-block;
+  margin-left: 70px;
+  padding-top: 23px;
+
+  position: relative;
+}
+
+nav a {
+  color: #444;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+nav a:hover {
+  color: #000;
+}
+
+nav a::before {
+  content: '';
+  display: block;
+  height: 5px;
+  background-color: #444;
+
+  position: absolute;
+  top: 0;
+  width: 0%;
+
+  transition: all ease-in-out 250ms;
+}
+
+nav a:hover::before {
+  width: 100%;
+}
+
+section.split
+{
+	position: relative;
+	height: 100vh;
+	display: flex;
+	background: #fff;
+}
+
+section.split .lieux
+{
+	opacity: 0.1;
+}
+
+section.split .lieux:hover
+{
+	flex-grow: 5;
+	opacity: 1;
+
+}
+
+.lieux
+{
+	position: relative;
+	flex-grow: 2;
+	display: flex;
+	justify-content: flex-end;
+	align-items: flex-end;
+	overflow: hidden;
+	transition: 1s;
+}
+
+.lieux:nth-child(1)
+{
+	background: url(../img/plage.jpg) no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+.lieux:nth-child(2)
+{
+	background: url(../img/pins.jpg) no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+.lieux:nth-child(3)
+{
+	background: url(../img/maquis.jpg) no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+.lieux .infos_lieux
+{
+	position: absolute;
+	width: 400px;
+	height: auto;
+	background: rgba(255, 255, 255, 0.712);
+	padding: 40px;
+	box-sizing: border-box;
+	transform: translateX(100%);
+	transition: 0.5s;
+	text-align: justify;
+}
+
+.lieux:hover .infos_lieux
+{
+	transform: translateX(0);
+	transition-delay: 1s;
+}
+
+.lieux .infos_lieux h2
+{
+	margin: 0;
+	padding: 0;
+	text-transform: uppercase;
+	font-size: 30px;
+	color: #ed363a;
+}
+
+.lieux .infos_lieux p
+
+{
+	margin: 0;
+	padding: 0;
+	color: #70CDFF;
+}
+
+body#connexion
+{
+    background: #e9ebee;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.box a
+{
+  padding-top: 0;
+  font-size: x-small;
+  color: #444;
+}
+
+.box a:hover
+{
+  color: #2ecc71;
+}
+
+.box{
+    position: relative;
+    text-align: center;
+}
+
+.box h3{
+    font-weight: 800;
+    color: #444;
+    text-transform: uppercase;
+}
+
+.box input[type ="text"],
+.box input[type ="email"],
+.box input[type ="password"]
+{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #444;
+    padding: 14px 10px;
+    width: 200px;
+    outline: none;
+    color: #444;
+    font-weight: bold;
+    border-radius: 24px;
+    transition: 0.25s;
+}
+
+.box input[type = "text"]:focus, 
+.box input[type ="email"]:focus,
+.box input[type = "password"]:focus
+{
+    width: 280px;
+    border-color: #2ecc71;
+}
+
+.box input[type = "submit"]
+{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #2ecc71;
+    padding: 14px 40px;
+    width: 200px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+}
+
+.box input[type = "submit"]:hover
+{
+    background: #2ecc71;
+
+}
+
+
+
+body#index
+{
+    font-family: 'Source Sans Pro', sans-serif;
+    background: #e9ebee;
+}
+
+#main_register
+{
+    background: #e9ebee;
+    background-size: cover;
+    border-radius: 10px;
+    font-family: 'Source Sans Pro', sans-serif;
+
+}
+#main_register h3
+{
+    text-align: center;
+    margin: 0;
+    border-bottom: 2px solid #2ecc71;
+    color: white;
+}
+#main_register form
+{
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3%;
+    color: #444;
+}
+#main_register form input
+{
+    margin: 3%;
+    text-align: center;
+    width: 60%;
+    font-size: 30px;
+    border: 2px solid #444;
+    background-color: rgb(31, 30, 30);
+    border-radius: 20px;
+    outline: none;
+    transition: 500ms width;
+    color: white;
+}
+#main_register form input::placeholder
+{
+    color: rgba(255, 255, 255, 0.39);
+}
+#main_register form input[type="submit"]
+{
+    font-size: 20px;
+    margin-top: 2%;
+    color: #88c1d0;
+    cursor: pointer;
+    width: 30%;
+    border-color: #2ecc71;
+    transition: 500ms;
+    transition-property: transform, background, color, border;
+}
+#main_register form input:not([type="submit"]):focus
+{
+    width: 70%;
+    border-color: #2ecc71;
+}
+#main_register form input:not([type="submit"]):valid
+{
+    width: 70%;
+    border-color: #88c1d0;
+}
+#main_register form input[type="submit"]:hover
+{
+    background-color: #2ecc71;
+    transform: scale(1.1,1.3);
+    color: black;
+    border-color: black;
+}
+#main_register a
+{
+    text-decoration: none;
+    color: #444;
+    transition-property: color;
+    transition-duration: 200ms;
+}
+#main_register a:hover
+{
+    color: #2ecc71;
+}
+
+/* FOOTER */
